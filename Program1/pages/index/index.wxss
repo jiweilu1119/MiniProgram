@@ -1,0 +1,19 @@
+/* pages/posts/post.wxss */
+swiper {
+ 
+width: 100%;
+height: 640rpx;
+}
+swiper image{
+width: 100%;
+height: 700rpx;
+}
+scroll-view image{
+height: 590rpx;
+}
+.center{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}

@@ -1,0 +1,35 @@
+<view>
+<view class="center">
+<text>Live is Beautiful</text>
+</view>
+  <swiper class="swiper" autoplay="true" interval="2000" >
+    <swiper-item>
+      <image src="/pages/images/1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/pages/images/2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/pages/images/4.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/pages/images/5.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/pages/images/6.jpg"></image>
+    </swiper-item>   
+
+  </swiper>
+
+<view class="page-section-spacing">
+        <scroll-view scroll-y="true" style="height: 800rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <view id="demo1" class="scroll-view-item demo-text-1"><image src="/pages/images/1.jpg"></image></view>
+          <view id="demo2"  class="scroll-view-item demo-text-2"><image src="/pages/images/2.jpg"></image></view>
+          <view id="demo3" class="scroll-view-item demo-text-3"><image src="/pages/images/5.jpg"></image></view>
+          <view id="demo3" class="scroll-view-item demo-text-3"><image src="/pages/images/4.jpg"></image></view>
+          <view id="demo3" class="scroll-view-item demo-text-3"><image src="/pages/images/6.jpg"></image></view>
+
+        </scroll-view>
+      </view>
+ 
+</view>

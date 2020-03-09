@@ -1,1 +1,9 @@
+### Week2代码
+## 用渲染方式重新呈现个人相册
+1. 页面下方tabBar导航（列表渲染、条件渲染、practice）
+2. 列表渲染关键语句 <view wx:for="{{array}}">
+3. 条件渲染关键语句 
+  <view wx:elif="{{array.length > 2}}"> <view wx:for="{{array}}">
+  <text>第{{index+1}}</text>: <image src="{{item.message}}
 
+## 源码阅读测试

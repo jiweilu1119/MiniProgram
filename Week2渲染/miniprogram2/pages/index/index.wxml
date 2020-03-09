@@ -1,0 +1,5 @@
+
+
+<view wx:for="{{array}}">
+  <text>第{{index+1}}</text>: <image src="{{item.message}}"></image>
+</view>

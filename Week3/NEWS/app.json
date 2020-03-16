@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/homePage/homePage",
+    "pages/attention/attention",
+    "pages/userCenter/userCenter",
+    "pages/video/video"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": " ",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#ffa589",
+    "backgroundColor": "#eeeeee",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/homePage/homePage",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "Video"
+      },
+      {
+        "pagePath": "pages/attention/attention",
+        "text": "Attention"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "User"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

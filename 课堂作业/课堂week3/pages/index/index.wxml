@@ -1,0 +1,208 @@
+
+
+<view class="container">
+
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>flex-direction: row\n横向布局</text>
+      </view>
+      <view class="page-section-spacing">
+        <view class="flex-wrp" style="flex-direction:row;">
+          <view class="flex-item demo-text-3"></view>
+          <view class="flex-item demo-text-2"></view>
+          <view class="flex-item demo-text-1"></view>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>flex-direction: column\n纵向布局</text>
+      </view>
+      <view class="flex-wrp" style="flex-direction:column;">
+        <view class="flex-item flex-item-V demo-text-1"></view>
+        <view class="flex-item flex-item-V demo-text-2"></view>
+        <view class="flex-item flex-item-V demo-text-3"></view>
+      </view>
+    </view>
+  </view>
+
+
+
+<view class="container">
+
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>Vertical Scroll\n纵向滚动</text>
+      </view>
+      <view class="page-section-spacing">
+        <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <view id="demo1" class="scroll-view-item demo-text-1"></view>
+          <view id="demo2"  class="scroll-view-item demo-text-2"></view>
+          <view id="demo3" class="scroll-view-item demo-text-3"></view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>Horizontal Scroll\n横向滚动</text>
+      </view>
+      <view class="page-section-spacing">
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
+          <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
+          <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+
+
+</view>
+
+</view>
+
+<view class="container">
+
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 20rpx;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">指示点</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">自动播放</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{autoplay}}" bindchange="changeAutoplay" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section page-section-spacing">
+      <view class="page-section-title">
+        <text>幻灯片切换时长(ms)</text>
+        <text class="info">{{duration}}</text>
+      </view>
+      <slider bindchange="durationChange" value="{{duration}}" min="500" max="2000"/>
+      <view class="page-section-title">
+        <text>自动播放间隔时长(ms)</text>
+        <text class="info">{{interval}}</text>
+      </view>
+      <slider bindchange="intervalChange" value="{{interval}}" min="2000" max="10000"/>
+    </view>
+  </view>
+
+</view>
+
+
+
+<view class="container">
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-title first">movable-view区域小于movable-area</view>
+      <movable-area>
+        <movable-view x="{{x}}" y="{{y}}" direction="all">text</movable-view>
+      </movable-area>
+    </view>
+    <view class="btn-area">
+      <button bindtap="tap" class="page-body-button" type="primary">点击移动到 (30px, 30px)</button>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">movable-view区域大于movable-area</view>
+      <movable-area>
+        <movable-view class="max" direction="all">text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">只可以横向移动</view>
+      <movable-area>
+        <movable-view direction="horizontal">text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">只可以纵向移动</view>
+      <movable-area>
+        <movable-view direction="vertical">text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">可超出边界</view>
+      <movable-area>
+        <movable-view direction="all" out-of-bounds>text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">带有惯性</view>
+      <movable-area>
+        <movable-view direction="all" inertia>text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">可放缩</view>
+      <movable-area scale-area>
+        <movable-view direction="all" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="{{scale}}">text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="btn-area">
+      <button bindtap="tap2" class="page-body-button" type="primary">点击放大3倍</button>
+    </view>
+  </view>
+
+</view>
+<view class="container">
+
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <map
+        style="width: 100%; height: 300px;"
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+      >
+        <cover-view class="cover-view">
+          <cover-view class="container">
+            <cover-view class="flex-wrp" style="flex-direction:row;">
+              <cover-view class="flex-item demo-text-1"></cover-view>
+              <cover-view class="flex-item demo-text-2"></cover-view>
+              <cover-view class="flex-item demo-text-3"></cover-view>
+            </cover-view>
+          </cover-view>
+        </cover-view>
+      </map>
+    </view>
+  </view>
+
+</view>
+
+<template name="StudentName">
+<view>{{firstName}} {{lastName}}</view>
+</template>
+
+<!--使用模板-->
+<template is="StudentName" data="{{...StudentA}}"></template>
+<template is="StudentName" data="{{...StudentB}}"></template>
+<template is="StudentName" data="{{...StudentC}}"></template>

@@ -1,0 +1,13 @@
+<!--pages/userCenter/userCenter.wxml-->
+<text>pages/userCenter/userCenter.wxml</text>
+
+<button bindtap="testButtonClick1" class="section">获取位置</button>
+
+  <button bindtap="testButtonClick2" class="section">打开地图选择位置 </button>
+
+  <button bindtap="testButtonClick3" class="section">使用微信内置地图查看位置 </button>
+
+  <view class="section2">地图组件控制 </view>
+  <map id="myMap" show-location />
+  <button type="primary" bindtap="getCenterLocation">获取位置</button>
+  <button type="primary" bindtap="moveToLocation">移动位置</button>

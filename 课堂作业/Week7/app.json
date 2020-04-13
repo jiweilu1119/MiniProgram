@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/homePage/homePage",
+    "pages/attention/attention",
+    "pages/map/map",
+    "pages/video/video" ,
+     "pages/test/test"
+  ],
+  
+  "text": "User",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": " ",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#ffa589",
+    "backgroundColor": "white",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/homePage/homePage",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home.png",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "iconPath": "images/video.png",
+        "selectedIconPath": "images/video.png",
+        "text": "Video"
+      },
+      {
+        "pagePath": "pages/attention/attention",
+        "iconPath": "images/attention.png",
+        "selectedIconPath": "images/attention.png",
+        "text": "Attention"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "iconPath": "images/userCenter.png",
+        "selectedIconPath": "images/userCenter.png",
+        "text": "Map"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "iconPath": "images/test.png",
+        "selectedIconPath": "images/test.png",
+        "text": "Test"
+      }
+    ]
+  },
+  
+  "sitemapLocation": "sitemap.json"
+  
+}

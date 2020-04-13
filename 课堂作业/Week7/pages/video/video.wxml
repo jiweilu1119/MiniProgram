@@ -1,0 +1,11 @@
+<view class="section tc">
+
+<view class="section tc">
+  <video id="myVideo" src="{{src}}" enable-danmu danmu-btn controls danmu-list="{{danmuList}}"></video>
+  <view class="btn-area">
+    <button bindtap="bindVTap">选取视频</button>
+    <input bindblur="bindInputBlur" placeholder="请输入弹幕内容"/>
+    <button bindtap="bindSendDanmu">发送弹幕</button>
+  </view>
+</view>
+</view>

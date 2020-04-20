@@ -1,0 +1,56 @@
+/**index.wxss**/
+
+/*音量图片底部view样式*/
+.speakPicViewClass{
+    position: relative;
+    height: 240rpx;
+    width: 240rpx;
+    border-radius: 20rpx;
+    margin: 50% auto;
+    background: #26A5FF;
+}
+
+/*录音按钮所在的view 样式*/
+.recordClass{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 120rpx;
+    width: 100%;
+}
+
+/*录音按钮 样式*/
+.recordButtonClass{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+/*音量图片 样式*/
+.imageClass{
+  position: absolute;
+  width: 74rpx;
+  height:150rpx;
+  margin-top: 45rpx;
+  margin-left: 83rpx;
+}
+
+/*一个cell的样式*/
+.cellClass {
+  overflow: hidden;
+  border-bottom: 2rpx solid #26A5FF;  
+    display: flex;
+    margin: 20rpx;
+}
+
+.cell .cellRowClass{
+    flex:1;
+    position: relative;
+   
+}
+/*一行内容*/
+.dateClass{
+    font-size: 30rpx;
+    text-overflow: ellipsis; 
+    white-space:nowrap;
+    overflow:hidden; 
+}

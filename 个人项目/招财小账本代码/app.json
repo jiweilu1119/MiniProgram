@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/income/income",
+    "pages/set/set"
+  ],
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#9170D9",
+    "navigationBarTitleText": "招财小账本",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#333333",
+    "color": "#FFFFFF",
+    "borderStyle": "white",
+    "selectedColor": "#EA9518",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/book1.png",
+        "selectedIconPath": "images/book1.png",
+        "text": "支出"
+      },
+      {
+        "pagePath": "pages/income/income",
+        "iconPath": "images/book1.png",
+        "selectedIconPath": "images/book1.png",
+        "text": "收入"
+      },
+      {
+        "pagePath": "pages/set/set",
+        "iconPath": "images/set.png",
+        "selectedIconPath": "images/set.png",
+        "text": "设置"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,92 @@
+
+<!--pages/show/show.wxml-->
+<view class="TableGet">
+
+  <view class="container" style="display:{{BillDisplay}}">
+    <view class="container-user">
+      <view bindtap="bindViewTap" class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" mode=""></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <!--<text class="userinfo-nickname">{{username}}</text>-->
+      </view>
+
+      <view class="MoneyMessage">
+          <view class="MoneyMessage-ul">
+                <view class="MoneyMessage-li01">
+                  <view>{{income.number}}</view>
+                  <text>收入</text>
+                </view>
+                <view class="MoneyMessage-li02"></view>
+                <view class="MoneyMessage-li03">
+                  <view>{{accountTotal}}</view>
+                  <text>支出</text>
+                </view>
+          </view>  
+      </view>
+    </view>
+</view>
+
+</view>
+
+
+<text class="userinfo-input-text">时间</text>
+			
+
+
+    <form catchsubmit="formSubmit" >
+    <view class="userinfo-input"> 
+        <input class="userinfo-input-input" maxlength="10" placeholder="例如“4月20号”" name="inputtime"/>
+			  <text class="userinfo-input-text">详情</text>
+      </view>
+    <view class="userinfo-input">
+
+       <input name="money" class="userinfo-input-input" maxlength="10" placeholder="例如“话费”"  name="inputdetail"/>
+			  <text class="userinfo-input-text">金额</text>
+
+      </view>
+
+      <view class="userinfo-input"> 
+      <input placeholder="单位：元" name="inputamount" type="number" class="userinfo-input-input"/>
+      </view>
+
+      <view>
+<button formType="submit" class='btn1' loading="{{buttonLoading}}">  
+      <image class='btnImg' src='../../images/wechat.png'></image>
+    <view>确定</view>
+ </button>
+		    
+
+		</view>
+
+    </form>
+
+
+    <text class="userinfo-input-text">支出列表</text>
+
+    <block wx:for="{{accountData}}" >
+
+      <view class="account-list">
+           <view class="account-list-detail">
+          {{item.time}}
+        </view>
+        <view class="account-list-detail">
+          {{item.detail}}
+        </view>
+
+        <view class="account-list-amount">
+          {{item.amount}}
+        </view>
+
+        <view class="account-list-del">
+
+            <button plain="true" class='btn2' data-index-key="{{index}}"  bindtap="deleteRow" ><image class='btnImg1' src='../../images/delete.png'></image></button>
+        </view>
+        </view>
+    </block>
+<!--
+<navigator url="/pages/income/income" hover-class="navigator-hover">
+		<view class="box01">收入</view>
+	</navigator>
+    
+-->
+
